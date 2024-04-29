@@ -1,0 +1,103 @@
+/* Общие стили для всех страниц */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9; /* Светлая тема по умолчанию */
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0; /* Убираем отступы на странице */
+    padding: 0;
+}
+
+.dark-mode {
+    background-color: #333; /* Темная тема */
+    color: #f9f9f9;
+}
+
+/* Стили для навигационной панели */
+nav {
+    position: fixed; /* Зафиксируем навигацию */
+    top: 0;
+    left: 0; /* Поместим меню в левый верхний угол */
+    padding: 20px;
+    z-index: 9999;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+}
+
+/* Стили для секций */
+section {
+    width: 80%; /* Центрируем блоки секций и устанавливаем ширину */
+    max-width: 800px; /* Максимальная ширина блоков */
+    margin: 50px auto; /* Центрируем блоки по горизонтали */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(11, 8, 8, 0.165); /* Бесцветный фон с небольшой прозрачностью */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode section {
+    background-color: rgba(0, 0, 0, 0.7); /* Бесцветный фон с небольшой прозрачностью в темной теме */
+}
+
+/* Стили для текста в секциях */
+section p {
+    color: #333; /* Цвет текста по умолчанию */
+}
+
+.dark-mode section p {
+    color: #f9f9f9; /* Цвет текста в темной теме */
+}
+
+.dark-mode  a {
+    color: #f9f9f9; /* Цвет текста в темной теме */
+}
+/* Стили для кнопки переключения темы */
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 0; /* Убираем внутренний отступ */
+    background: none; /* Убираем фон кнопки */
+    border: none; /* Убираем границу кнопки */
+    cursor: pointer;
+    z-index: 9999;
+    transition: transform 0.2s ease; /* Добавляем плавный переход при изменении размера */
+}
+
+/* Стили для изображения внутри кнопки */
+#theme-icon {
+    max-width: 20px; /* Устанавливаем максимальную ширину изображения */
+    display: block; /* Превращаем изображение в блочный элемент */
+}
+
+/* Анимация для кнопки */
+#theme-toggle:active {
+    transform: scale(1.1); /* Увеличиваем размер кнопки при нажатии */
+}
+
+
+
+/* Адаптивное меню */
+@media screen and (max-width: 768px) {
+    nav {
+        position: static; /* Вернем меню в естественное положение */
+        text-align: center; /* Выравниваем элементы по центру */
+    }
+
+    nav ul li {
+        display: inline-block; /* Строчное отображение элементов меню */
+        margin-right: 10px; /* Небольшой отступ между элементами */
+    }
+}
